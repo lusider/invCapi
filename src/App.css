@@ -24,6 +24,55 @@
   color: white;
 }
 
+.container { 
+  width: 580;
+  margin: '0 auto'; 
+  display: 'flex'; 
+  flex-direction: 'column';
+  justify-content: 'center';
+  padding: 20; 
+  border-bottom: 'solid orange'; }
+
+
+small {  
+  border: 'none'; 
+  background-color: '#ddd';
+  margin-bottom: 10; 
+  padding: 8; 
+  font-size: 18; 
+  width: 70; }
+
+.medium {  
+  border: 'none';
+  background-color: '#ddd';
+  margin-bottom: 10;
+  padding: 8; 
+  font-size: 18; 
+  width: 180; }
+
+.input { 
+  border: 'none'; 
+  background-color: '#ddd';
+  margin-bottom: 10; 
+  padding: 8; 
+  font-size: 18; }
+
+.postSymbol { 
+  font-size: 20; 
+  font-weight: 'bold'; }
+
+.postPrediction { margin-bottom: 0; }
+
+button { 
+  width: '150px'; 
+  height: '38px'; 
+  background-color: 'black'; 
+  color: 'white'; 
+  outline: 'none'; 
+  font-size: 18;
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +85,4 @@
     transform: rotate(360deg);
   }
 }
+

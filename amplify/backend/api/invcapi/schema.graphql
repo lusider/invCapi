@@ -1,0 +1,49 @@
+type UserInfo @model @auth(rules: [{ allow: owner, operations: [create] }]) {
+    id: ID!
+    userInfoOwnerId: String!
+    userInfoOwnerUsername: String!
+    firstName: String!
+    lastName: String!
+    photo: String! 
+    stocks: [Stock]
+    posts: [Post] @connection(name: "UserPosts")
+}
+
+type Post @model @auth(rules: [{ allow: owner, operations: [create] }]) {
+    id: ID!
+    postOwnerId: String!
+    postOwnerUsername: String!
+    symbol: String!
+    prediction: Float!
+    predictionEndDate: String!
+    call: String!
+    user: UserInfo @connection(name: "UserPosts")
+    likes: [Like] @connection(name: "PostLikes")
+    comments: [Comment] @connection(name: "PostComments")
+}
+
+type Like @model {
+	id: ID!
+	numberLikes: Int!
+	likeOwnerId: String!
+  likeOwnerUsername: String!
+	post: Post @connection(name: "PostLikes")
+}
+
+
+type Comment @model {
+    id: ID!
+    commentOwnerId: String!
+    commentOwnerUsername: String!
+    content: String
+    post: Post @connection(name: "PostComments")
+}
+
+type Stock @model @auth(rules: [{ allow: owner, operations: [create, update, delete] }]) {
+    id: ID!
+    symbol: String!
+    companyName: String!
+    date: String!
+    price: Int!
+    dailyHigh: Int!
+}

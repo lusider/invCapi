@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "invcapi",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authinvcapi30129083",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

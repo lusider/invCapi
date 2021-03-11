@@ -54,6 +54,7 @@ class AddPost extends React.Component {
                             value={this.state.symbol}
                             placeholder="WXYZ"
                             style={styles.small}
+                            required
                         />
                         <input
                             onChange={this.handleChangePost}
@@ -62,6 +63,7 @@ class AddPost extends React.Component {
                             value={this.state.prediction}
                             placeholder="$0.00"
                             style={styles.small}
+                            required
                         />
                         <input
                             onChange={this.handleChangePost}
@@ -69,7 +71,8 @@ class AddPost extends React.Component {
                             name="predictionEndDate"
                             value={this.state.predictionEndDate}
                             placeholder="12-11-21"  
-                            style={styles.medium}    
+                            style={styles.medium}
+                            required    
                         />
                     </div>
                     <div style={styles.postBox}>
@@ -81,6 +84,7 @@ class AddPost extends React.Component {
                             value={this.state.call}
                             placeholder="Post"
                             style={styles.input}
+                            required
                             
                         />
                         </div>

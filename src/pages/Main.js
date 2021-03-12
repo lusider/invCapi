@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import AddPost from '../../classComponents/AddPost'
-import DisplayPosts from '../../classComponents/DisplayPosts'
+import AddPost from '../components/AddPost'
+import DisplayPosts from '../components/DisplayPosts'
 
 export default class Main extends Component {
     render() {

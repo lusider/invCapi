@@ -1,6 +1,6 @@
 
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
-import Main from './pages/Main'
+import Home from './pages/Home'
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux'
 
@@ -15,7 +15,7 @@ function App() {
       <h1 style={{margin: 10, paddingLeft: 10}}>invCapi</h1>
       <AmplifySignOut />
     </div>
-    <Main />
+    <Home />
     </Provider>
     </>
   );
